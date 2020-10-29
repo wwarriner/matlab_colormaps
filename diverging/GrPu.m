@@ -1,4 +1,4 @@
-function c = diverging_gov(m)
+function c = GrPu(m)
 
 if nargin < 1
     m = 256;

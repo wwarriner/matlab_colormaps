@@ -1,4 +1,4 @@
-function c = diverging_gwr(m)
+function c = GrPi(m)
 
 if nargin < 1
     m = 256;

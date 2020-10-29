@@ -1,4 +1,4 @@
-function c = diverging_bwr(m)
+function c = BuRe(m)
 
 if nargin < 1
     m = 256;

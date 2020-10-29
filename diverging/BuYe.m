@@ -1,4 +1,4 @@
-function c = diverging_bwy(m)
+function c = BuYe(m)
 
 if nargin < 1
     m = 256;

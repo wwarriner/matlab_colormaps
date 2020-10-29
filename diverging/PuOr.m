@@ -1,4 +1,4 @@
-function c = diverging_vwo(m)
+function c = PuOr(m)
 
 if nargin < 1
     m = 256;
