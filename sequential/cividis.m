@@ -1,5 +1,5 @@
 function c = cividis(m)
-% Originally created by  Jamie R. Nuñez, Christopher R. Anderton and Ryan S. Renslow
+% Originally created by Jamie R. Nuñez, Christopher R. Anderton and Ryan S. Renslow
 % https://doi.org/10.1371/journal.pone.0199239
 % Adapted for MATLAB by William Warriner 2020
 % rgb values pulled from
