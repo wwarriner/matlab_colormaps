@@ -1,19 +1,11 @@
-function c = viridis(m)
+function c = viridis(varargin)
 % Copyright Eric Firing
 % Adapted for MATLAB by William Warriner 2020
 % pulled from
 % https://github.com/BIDS/colormap/blob/master/colormaps.py
 
-if nargin < 1
-    m = 256;
-end
-
-assert(isnumeric(m));
-assert(isscalar(m));
-assert(isreal(m));
-assert(isfinite(m));
-assert(mod(m, 1) == 0);
-assert(1 <= m);
+parsed = mc_input_parse(varargin{:});
+m = parsed.m;
 
 rgb = [...
     0.267004 0.004874 0.329415;...

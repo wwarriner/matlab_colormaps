@@ -1,20 +1,12 @@
-function c = cividis(m)
+function c = cividis(varargin)
 % Originally created by Jamie R. Nuñez, Christopher R. Anderton and Ryan S. Renslow
 % https://doi.org/10.1371/journal.pone.0199239
 % Adapted for MATLAB by William Warriner 2020
 % rgb values pulled from
 % https://www.ncl.ucar.edu/Document/Graphics/ColorTables/cividis.shtml
 
-if nargin < 1
-    m = 256;
-end
-
-assert(isnumeric(m));
-assert(isscalar(m));
-assert(isreal(m));
-assert(isfinite(m));
-assert(mod(m, 1) == 0);
-assert(1 <= m);
+parsed = mc_input_parse(varargin{:});
+m = parsed.m;
 
 rgb = [...
     0.0000 0.1262 0.3015;...

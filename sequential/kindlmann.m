@@ -1,19 +1,11 @@
-function c = blackbody(m)
+function c = kindlmann(varargin)
 % Originally created by Kenneth Moreland
 % Adapted for MATLAB by William Warriner 2020
 % rgb values pulled from
 % https://www.kennethmoreland.com/color-advice/
 
-if nargin < 1
-    m = 256;
-end
-
-assert(isnumeric(m));
-assert(isscalar(m));
-assert(isreal(m));
-assert(isfinite(m));
-assert(mod(m, 1) == 0);
-assert(1 <= m);
+parsed = mc_input_parse(varargin{:});
+m = parsed.m;
 
 rgb = [...
     0 0 0;...

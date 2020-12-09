@@ -1,19 +1,11 @@
-function c = sinebow(m)
+function c = sinebow(varargin)
 % Credit to Charlie Loyd
 % Adapted for MATLAB by William Warriner 2020
 % pulled from
 % https://basecase.org/env/on-rainbows
 
-if nargin < 1
-    m = 256;
-end
-
-assert(isnumeric(m));
-assert(isscalar(m));
-assert(isreal(m));
-assert(isfinite(m));
-assert(mod(m, 1) == 0);
-assert(1 <= m);
+parsed = mc_input_parse(varargin{:});
+m = parsed.m;
 
 h = linspace(0, 1, m);
 c = hue_to_rgb(h);

@@ -1,15 +1,7 @@
-function c = BuYe(m)
+function c = BuYe(varargin)
 
-if nargin < 1
-    m = 256;
-end
-
-assert(isnumeric(m));
-assert(isscalar(m));
-assert(isreal(m));
-assert(isfinite(m));
-assert(mod(m, 1) == 0);
-assert(1 <= m);
+parsed = mc_input_parse(varargin{:});
+m = parsed.m;
 
 b = [0.217 0.525 0.910];
 y = [0.677 0.492 0.093];

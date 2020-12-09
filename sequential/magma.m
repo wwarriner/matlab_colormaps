@@ -1,19 +1,11 @@
-function c = magma(m)
+function c = magma(varargin)
 % Copyright Nathaniel J. Smith and Stefan van der Walt
 % Adapted for MATLAB by William Warriner 2020
 % pulled from
 % https://github.com/BIDS/colormap/blob/master/colormaps.py
 
-if nargin < 1
-    m = 256;
-end
-
-assert(isnumeric(m));
-assert(isscalar(m));
-assert(isreal(m));
-assert(isfinite(m));
-assert(mod(m, 1) == 0);
-assert(1 <= m);
+parsed = mc_input_parse(varargin{:});
+m = parsed.m;
 
 rgb = [...
     0.001462 0.000466 0.013866;...

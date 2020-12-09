@@ -1,19 +1,11 @@
-function c = twilight(m)
+function c = twilight(varargin)
 % Copyright Bastian Bechtold 2015
 % Adapted for MATLAB by William Warriner 2020
 % pulled from
 % https://github.com/bastibe/twilight/blob/master/twilight.m
 
-if nargin < 1
-    m = 256;
-end
-
-assert(isnumeric(m));
-assert(isscalar(m));
-assert(isreal(m));
-assert(isfinite(m));
-assert(mod(m, 1) == 0);
-assert(1 <= m);
+parsed = mc_input_parse(varargin{:});
+m = parsed.m;
 
 rgb = [...
     0.95588623 0.91961077 0.95812116;...

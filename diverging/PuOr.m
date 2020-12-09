@@ -1,15 +1,7 @@
-function c = PuOr(m)
+function c = PuOr(varargin)
 
-if nargin < 1
-    m = 256;
-end
-
-assert(isnumeric(m));
-assert(isscalar(m));
-assert(isreal(m));
-assert(isfinite(m));
-assert(mod(m, 1) == 0);
-assert(1 <= m);
+parsed = mc_input_parse(varargin{:});
+m = parsed.m;
 
 v = [0.436 0.308 0.631];
 o = [0.759 0.334 0.046];

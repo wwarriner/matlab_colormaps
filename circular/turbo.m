@@ -1,4 +1,4 @@
-function c = turbo(m)
+function c = turbo(varargin)
 % Copyright 2019 Google LLC.
 % SPDX-License-Identifier: Apache-2.0
 % Author: Anton Mikhailov
@@ -6,16 +6,8 @@ function c = turbo(m)
 % pulled from
 % https://gist.github.com/mikhailov-work/ee72ba4191942acecc03fe6da94fc73f
 
-if nargin < 1
-    m = 256;
-end
-
-assert(isnumeric(m));
-assert(isscalar(m));
-assert(isreal(m));
-assert(isfinite(m));
-assert(mod(m, 1) == 0);
-assert(1 <= m);
+parsed = mc_input_parse(varargin{:});
+m = parsed.m;
 
 rgb = [...
     [0.18995,0.07176,0.23217];...
