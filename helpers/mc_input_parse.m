@@ -2,6 +2,8 @@ function parsed = mc_input_parse(varargin)
 
 if nargin < 1
     m = 256;
+else
+    m = varargin{1};
 end
 
 assert(isnumeric(m));
