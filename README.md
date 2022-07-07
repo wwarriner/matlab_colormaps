@@ -12,7 +12,7 @@ To showcase any colormap against several tests and samples, call `showcase_cmap(
 
 Please contact me if you believe I am missing a license, a source, or have misattributed anything. I absolutely want to give credit where credit is due because your hard work is important to me and to my peers.
 
-- **Jan Brewer** for popularizing the idea of accessible colormaps in the scientific community via a well-researched dissertation effort and providing a helpful website demonstrating the colormaps in action. [[source](https://colorbrewer2.org/)]
+- **Cynthia Brewer** for popularizing the idea of accessible colormaps in the scientific community via a well-researched dissertation effort and providing a helpful website demonstrating the colormaps in action. [[source](https://colorbrewer2.org/)]
 - **Fabio Crameri** for numerous colormaps and for a robust scientific approach to scientific color graphics in two dimensions. [[source](http://www.fabiocrameri.ch/colourmaps.php)]
 - **Kenneth Moreland** for devising a general method for producing useful colormaps appropriate for illuminated surface representations in three dimensions, and related research, and for the numeric values of the blackbody colormap. [[source](https://www.kennethmoreland.com/color-advice/)]
 - **Nathaniel J. Smith** and **Stefan van der Walt** for inferno, magma and plasma. [[source](https://bids.github.io/colormap/)]
